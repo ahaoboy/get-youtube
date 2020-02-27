@@ -17,11 +17,11 @@ jobs:
         mkdir tmp
         cd tmp
         you-get https://www.youtube.com/watch?v=Xk0Jc1rXf78
-        
+        cd ..
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        files: ./*
+        files: /tmp/**
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         
